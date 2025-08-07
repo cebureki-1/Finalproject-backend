@@ -6,6 +6,8 @@ const getProfile = async (req, res) => {
   
   const result = await pool.query("SELECT id, username, email, avatar FROM users WHERE id = $1", [userId]);
   res.json(result.rows[0]);
+  console.log(result.rows[0]); 
+  
 };
 
 // Обновление профиля
